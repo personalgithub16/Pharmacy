@@ -19,6 +19,37 @@ Route::get('/', function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/mother_dashboard','App\Http\Controllers\DashboardController@index')->name('mother_dashboard');
+    
+    Route::get('/Customer_Details/create', 'App\Http\Controllers\CustomerController@create')->name('Customer_Details.create');
+    Route::put('/Customer_Details/create', 'App\Http\Controllers\CustomerController@store')->name('Customer_Details.store');
+    Route::get('/Customer_Details/list', 'App\Http\Controllers\CustomerController@list')->name('Customer_Details.list');
+    Route::get('/Customer_Details/edit/{id}', 'App\Http\Controllers\CustomerController@edit')->name('Customer_Details.edit');
+    Route::post('/Customer_Details/update/{id}', 'App\Http\Controllers\CustomerController@update')->name('Customer_Details.update');
+    Route::get('Customer_Details/{id}', 'App\Http\Controllers\CustomerController@destroy')->name('Customer_Details.destroy');
+    Route::get('/Customer_Details/preview/{id}', 'App\Http\Controllers\CustomerController@preview')->name('Customer_Details.preview');
+
+    
+    Route::get('/Category_Details/create', 'App\Http\Controllers\CategoryController@create')->name('Category_Details.create');
+    Route::put('/Category_Details/create', 'App\Http\Controllers\CategoryController@store')->name('Category_Details.store');
+    Route::get('/Category_Details/list', 'App\Http\Controllers\CategoryController@list')->name('Category_Details.list');
+    Route::get('/Category_Details/edit/{id}', 'App\Http\Controllers\CategoryController@edit')->name('Category_Details.edit');
+    Route::post('/Category_Details/update/{id}', 'App\Http\Controllers\CategoryController@update')->name('Category_Details.update');
+    Route::get('/Category_Details/{id}', 'App\Http\Controllers\CategoryController@destroy')->name('Category_Details.destroy');
+
+
+    Route::get('/Unit_Details/create', 'App\Http\Controllers\UnitController@create')->name('Unit_Details.create');
+    Route::put('/Unit_Details/create', 'App\Http\Controllers\UnitController@store')->name('Unit_Details.store');
+    Route::get('/Unit_Details/list', 'App\Http\Controllers\UnitController@list')->name('Unit_Details.list');
+    Route::get('/Unit_Details/edit/{id}', 'App\Http\Controllers\UnitController@edit')->name('Unit_Details.edit');
+    Route::post('/Unit_Details/update/{id}', 'App\Http\Controllers\UnitController@update')->name('Unit_Details.update');
+    Route::get('/Unit_Details/{id}', 'App\Http\Controllers\UnitController@destroy')->name('Unit_Details.destroy');
+
+    Route::get('/Medicine_Type/create', 'App\Http\Controllers\MedicineTypeController@create')->name('Medicine_Type_Details.create');
+    Route::put('/Medicine_Type/create', 'App\Http\Controllers\MedicineTypeController@store')->name('Medicine_Type_Details.store');
+    Route::get('/Medicine_Type/list', 'App\Http\Controllers\MedicineTypeController@list')->name('Medicine_Type_Details.list');
+    Route::get('/Medicine_Type/edit/{id}', 'App\Http\Controllers\MedicineTypeController@edit')->name('Medicine_Type_Details.edit');
+    Route::post('/Medicine_Type/update/{id}', 'App\Http\Controllers\MedicineTypeController@update')->name('Medicine_Type_Details.update');
+    Route::get('/Medicine_Type/{id}', 'App\Http\Controllers\MedicineTypeController@destroy')->name('Medicine_Type_Details.destroy');
 });
 
 
