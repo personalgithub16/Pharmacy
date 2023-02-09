@@ -30,14 +30,12 @@ class ManufacturerController extends Controller
             'manufacturer_name.required' => 'Please write the manufacturer name', 
             'agent_national_id_card.required' => 'Please write the NID number of the agent', 
             'agent_mobile_number.required' => 'Please write the mobile number of the agent', 
-            'agent_mobile_number.required' => 'Please write the mobile number of the agent'
         ]);
         $Manufacturer_Details = new Manufacturer;
         $Manufacturer_Details->manufacturer_name = $request->manufacturer_name;
         $Manufacturer_Details->agent_national_id_card = $request->agent_national_id_card;
         $Manufacturer_Details->agent_mobile_number = $request->agent_mobile_number;
         $Manufacturer_Details->debit_balance = $request->debit_balance;
-        $Manufacturer_Details->total_debit = $request->total_debit;
         $Manufacturer_Details->save();
         Toastr::success('success', 'Successfully added manufacturer informations', ['"closeButton": true,
         "debug": false,
@@ -75,14 +73,12 @@ class ManufacturerController extends Controller
             'manufacturer_name.required' => 'Please write the manufacturer name', 
             'agent_national_id_card.required' => 'Please write the NID number of the agent', 
             'agent_mobile_number.required' => 'Please write the mobile number of the agent', 
-            'agent_mobile_number.required' => 'Please write the mobile number of the agent'
         ]);
         $Manufacturer_Details = Manufacturer::find($id);
         $Manufacturer_Details->manufacturer_name = $request->manufacturer_name;
         $Manufacturer_Details->agent_national_id_card = $request->agent_national_id_card;
         $Manufacturer_Details->agent_mobile_number = $request->agent_mobile_number;
         $Manufacturer_Details->debit_balance = $request->debit_balance;
-        $Manufacturer_Details->total_debit = $request->total_debit;
         $Manufacturer_Details->save();
         Toastr::success('success', 'Successfully updated Manufacturer informations', ['"closeButton": true,
         "debug": false,
@@ -123,9 +119,13 @@ class ManufacturerController extends Controller
         "hideMethod": "fadeOut"']);
         return redirect()->route('Manufacturer_Details.list');
     }
+    
     public function preview($id)
     {
         $Manufacturer_Details = Manufacturer::find($id);
-        return view('pages.Crud_Functions.Manufacturer_Details.preview',compact('Manufacturer_Details'));
+        $total_balance = DB::select(DB::raw("
+        SELECT manufacturer_name, SUM(debit_balance) as total_debit FROM manufacturers GROUP BY manufacturer_name;
+        "));
+        return view('pages.Crud_Functions.Manufacturer_Details.preview',compact('Manufacturer_Details','total_balance'));
     }
 }

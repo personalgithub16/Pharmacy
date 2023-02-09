@@ -58,6 +58,15 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/Leaf_Type/edit/{id}', 'App\Http\Controllers\LeafTypeController@edit')->name('LeafType_Details.edit');
     Route::post('/Leaf_Type/update/{id}', 'App\Http\Controllers\LeafTypeController@update')->name('LeafType_Details.update');
     Route::get('/Leaf_Type/{id}', 'App\Http\Controllers\LeafTypeController@destroy')->name('LeafType_Details.destroy');
+
+
+    Route::get('/Manufacturer_Details/create', 'App\Http\Controllers\ManufacturerController@create')->name('Manufacturer_Details.create');
+    Route::put('/Manufacturer_Details/create', 'App\Http\Controllers\ManufacturerController@store')->name('Manufacturer_Details.store');
+    Route::get('/Manufacturer_Details/list', 'App\Http\Controllers\ManufacturerController@list')->name('Manufacturer_Details.list');
+    Route::get('/Manufacturer_Details/edit/{id}', 'App\Http\Controllers\ManufacturerController@edit')->name('Manufacturer_Details.edit');
+    Route::post('/Manufacturer_Details/update/{id}', 'App\Http\Controllers\ManufacturerController@update')->name('Manufacturer_Details.update');
+    Route::get('Manufacturer_Details/{id}', 'App\Http\Controllers\ManufacturerController@destroy')->name('Manufacturer_Details.destroy');
+    Route::get('/Manufacturer_Details/preview/{id}', 'App\Http\Controllers\ManufacturerController@preview')->name('Manufacturer_Details.preview');
 });
 
 

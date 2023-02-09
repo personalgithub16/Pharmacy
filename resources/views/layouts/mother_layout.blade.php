@@ -218,8 +218,11 @@
                       <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="{{route('Medicine_Type_Details.list')}}">
                         <i data-feather="codepen"> </i><span>Medicine Type</span></a></li>
 
-                        <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="{{route('LeafType_Details.list')}}">
+                      <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="{{route('LeafType_Details.list')}}">
                           <i data-feather="feather"> </i><span>Leaf Type</span></a></li>
+
+                      <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="{{route('Manufacturer_Details.list')}}">
+                        <i data-feather="users"> </i><span>Manufacturer</span></a></li>
                   </ul>
                 </li>
               </ul>

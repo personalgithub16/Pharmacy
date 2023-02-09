@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateManufacturersTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('manufacturers', function (Blueprint $table) {
@@ -18,17 +13,11 @@ class CreateManufacturersTable extends Migration
             $table->string('manufacturer_name');
             $table->string('agent_national_id_card');
             $table->string('agent_mobile_number');
-            $table->string('debit_balance');
-            $table->string('total_debit');
+            $table->float('debit_balance', 12, 2)->default(0);
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('manufacturers');

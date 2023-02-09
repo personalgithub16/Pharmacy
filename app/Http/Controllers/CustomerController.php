@@ -165,6 +165,9 @@ class CustomerController extends Controller
     public function preview($id)
     {
         $Customer_Details = customer::find($id);
-        return view('pages.Crud_Functions.Customer_Details.preview',compact('Customer_Details'));
+        $total_balance = DB::select(DB::raw("
+        SELECT customer_name, SUM(debit_balance) as total_debit FROM customers GROUP BY customer_name;
+        "));
+        return view('pages.Crud_Functions.Customer_Details.preview',compact('Customer_Details','total_balance'));
     }
 }
