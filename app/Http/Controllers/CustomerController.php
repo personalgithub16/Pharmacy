@@ -167,6 +167,4 @@ class CustomerController extends Controller
         $Customer_Details = customer::find($id);
         return view('pages.Crud_Functions.Customer_Details.preview',compact('Customer_Details'));
     }
-
-
 }
