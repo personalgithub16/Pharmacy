@@ -50,6 +50,14 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/Medicine_Type/edit/{id}', 'App\Http\Controllers\MedicineTypeController@edit')->name('Medicine_Type_Details.edit');
     Route::post('/Medicine_Type/update/{id}', 'App\Http\Controllers\MedicineTypeController@update')->name('Medicine_Type_Details.update');
     Route::get('/Medicine_Type/{id}', 'App\Http\Controllers\MedicineTypeController@destroy')->name('Medicine_Type_Details.destroy');
+
+
+    Route::get('/Leaf_Type/create', 'App\Http\Controllers\LeafTypeController@create')->name('LeafType_Details.create');
+    Route::put('/Leaf_Type/create', 'App\Http\Controllers\LeafTypeController@store')->name('LeafType_Details.store');
+    Route::get('/Leaf_Type/list', 'App\Http\Controllers\LeafTypeController@list')->name('LeafType_Details.list');
+    Route::get('/Leaf_Type/edit/{id}', 'App\Http\Controllers\LeafTypeController@edit')->name('LeafType_Details.edit');
+    Route::post('/Leaf_Type/update/{id}', 'App\Http\Controllers\LeafTypeController@update')->name('LeafType_Details.update');
+    Route::get('/Leaf_Type/{id}', 'App\Http\Controllers\LeafTypeController@destroy')->name('LeafType_Details.destroy');
 });
 
 

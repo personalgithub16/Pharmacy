@@ -214,9 +214,12 @@
 
                       <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="{{route('Unit_Details.list')}}">
                         <i data-feather="archive"></i><span>Unit Name</span></a></li>
-
+                        
                       <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="{{route('Medicine_Type_Details.list')}}">
                         <i data-feather="codepen"> </i><span>Medicine Type</span></a></li>
+
+                        <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="{{route('LeafType_Details.list')}}">
+                          <i data-feather="feather"> </i><span>Leaf Type</span></a></li>
                   </ul>
                 </li>
               </ul>
