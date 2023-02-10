@@ -59,7 +59,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/Leaf_Type/update/{id}', 'App\Http\Controllers\LeafTypeController@update')->name('LeafType_Details.update');
     Route::get('/Leaf_Type/{id}', 'App\Http\Controllers\LeafTypeController@destroy')->name('LeafType_Details.destroy');
 
-
+    
     Route::get('/Manufacturer_Details/create', 'App\Http\Controllers\ManufacturerController@create')->name('Manufacturer_Details.create');
     Route::put('/Manufacturer_Details/create', 'App\Http\Controllers\ManufacturerController@store')->name('Manufacturer_Details.store');
     Route::get('/Manufacturer_Details/list', 'App\Http\Controllers\ManufacturerController@list')->name('Manufacturer_Details.list');
@@ -67,6 +67,15 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/Manufacturer_Details/update/{id}', 'App\Http\Controllers\ManufacturerController@update')->name('Manufacturer_Details.update');
     Route::get('Manufacturer_Details/{id}', 'App\Http\Controllers\ManufacturerController@destroy')->name('Manufacturer_Details.destroy');
     Route::get('/Manufacturer_Details/preview/{id}', 'App\Http\Controllers\ManufacturerController@preview')->name('Manufacturer_Details.preview');
+
+
+    Route::get('/Medicine_Details/create', 'App\Http\Controllers\MedicineController@create')->name('Medicine_Details.create');
+    Route::put('/Medicine_Details/create', 'App\Http\Controllers\MedicineController@store')->name('Medicine_Details.store');
+    Route::get('/Medicine_Details/list', 'App\Http\Controllers\MedicineController@list')->name('Medicine_Details.list');
+    Route::get('/Medicine_Details/edit/{id}', 'App\Http\Controllers\MedicineController@edit')->name('Medicine_Details.edit');
+    Route::post('/Medicine_Details/update/{id}', 'App\Http\Controllers\MedicineController@update')->name('Medicine_Details.update');
+    Route::get('Medicine_Details/{id}', 'App\Http\Controllers\MedicineController@destroy')->name('Medicine_Details.destroy');
+    Route::get('/Medicine_Details/preview/{id}', 'App\Http\Controllers\MedicineController@preview')->name('Medicine_Details.preview');
 });
 
 

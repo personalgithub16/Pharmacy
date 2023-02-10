@@ -9,7 +9,8 @@
         <div class="card">
           <div class="card-header pb-0">
             <span>
-              <a href="{{route('Manufacturer_Details.list')}}"><button class="btn btn-outline-success-2x" type="button" style="float: right;"><i class="fa-solid fa-list"></i>       Manufacturer List    </button></a>
+              <a href="{{route('Manufacturer_Details.list')}}"><button class="btn btn-outline-success-2x" type="button"
+                  style="float: right;"><i class="fa-solid fa-list"></i> Manufacturer List </button></a>
             </span>
           </div>
           <div class="card-header pb-0">
@@ -22,7 +23,9 @@
                   <!-- Manufacturer Name -->
                   <div class="col-md-12 mb-3">
                     <label class="form-label ">Manufacturer Name</label>
-                    <input class="form-control" name="manufacturer_name" value="{{ (old('manufacturer_name')?old('manufacturer_name'):'') }}" type="text" autocomplete="off">
+                    <input class="form-control" name="manufacturer_name"
+                      value="{{ (old('manufacturer_name')?old('manufacturer_name'):'') }}" type="text"
+                      autocomplete="off">
                   </div>
                   <!-- Manufacturer Name -->
 
@@ -34,11 +37,12 @@
                   </div>
                   @endif
                   <!-- Validation End -->
-                  
+
                   <!-- Form Input Start -->
                   <div class="col-md-12 mb-3">
                     <label class="form-label">Agent's National ID Card Number</label>
-                    <input class="form-control" name="agent_national_id_card" type="text" value="{{ (old('agent_national_id_card')?old('agent_national_id_card'):'') }}" autocomplete="off">
+                    <input class="form-control" name="agent_national_id_card" type="text"
+                      value="{{ (old('agent_national_id_card')?old('agent_national_id_card'):'') }}" autocomplete="off">
                   </div>
                   <!-- Form Input End -->
 
@@ -54,10 +58,12 @@
                   <!-- Form Input Start -->
                   <div class="col-md-12 mb-3">
                     <label class="form-label">Agent Mobile Number</label>
-                    <input class="form-control" name="agent_mobile_number" value="{{ (old('agent_mobile_number')?old('agent_mobile_number'):'') }}" type="text" autocomplete="off">
+                    <input class="form-control" name="agent_mobile_number"
+                      value="{{ (old('agent_mobile_number')?old('agent_mobile_number'):'') }}" type="text"
+                      autocomplete="off">
                   </div>
                   <!-- Form Input End -->
-                  
+
                   <!-- Validation Start -->
                   @if($errors->first('agent_mobile_number'))
                   <div class="alert alert-dark dark alert-dismissible fade show" role="alert">
@@ -70,7 +76,8 @@
                   <!-- Form Input Start -->
                   <div class="col-md-12 mb-3">
                     <label class="form-label">Debit Balance</label>
-                    <input class="form-control" name="debit_balance" value="{{ (old('debit_balance')?old('debit_balance'):'') }}" type="text" autocomplete="off">
+                    <input class="form-control" name="debit_balance"
+                      value="{{ (old('debit_balance')?old('debit_balance'):'') }}" type="text" autocomplete="off">
                   </div>
                   <!-- Form Input End -->
 
@@ -93,6 +100,9 @@
     </div>
     <!-- Container-fluid Ends-->
   </div>
-  <!-- footer start-->
+  <!-- Container-fluid ends-->
+
+</div>
+
 
   @endsection

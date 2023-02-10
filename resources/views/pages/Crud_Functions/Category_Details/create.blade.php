@@ -9,7 +9,8 @@
         <div class="card">
           <div class="card-header pb-0">
             <span>
-              <a href="{{route('Category_Details.list')}}"><button class="btn btn-outline-success-2x" type="button" style="float: right;"><i class="fa-solid fa-list"></i>       Category List    </button></a>
+              <a href="{{route('Category_Details.list')}}"><button class="btn btn-outline-success-2x" type="button"
+                  style="float: right;"><i class="fa-solid fa-list"></i> Category List </button></a>
             </span>
           </div>
           <div class="card-header pb-0">
@@ -22,7 +23,8 @@
                   <!-- Form Input Start -->
                   <div class="col-md-12 mb-3">
                     <label class="form-label ">Category Name</label>
-                    <input class="form-control" name="category_name" value="{{ (old('category_name')?old('category_name'):'') }}" type="text" autocomplete="off">
+                    <input class="form-control" name="category_name"
+                      value="{{ (old('category_name')?old('category_name'):'') }}" type="text" autocomplete="off">
                   </div>
                   <!-- Form Input End -->
 
@@ -45,5 +47,6 @@
     <!-- Container-fluid Ends-->
   </div>
   <!-- footer start-->
+</div>
 
-  @endsection
+@endsection

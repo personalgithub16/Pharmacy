@@ -14,13 +14,14 @@
   <title>Pharmacy Management System</title>
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-  
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/select2.css')}}">
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
     rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{asset("assets/css/vendors/font-awesome.css")}}">
   <!-- ico-font-->
   <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/icofont.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/date-picker.css')}}">
   <!-- Themify icon-->
   <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/themify.css')}}">
   <!-- Flag icon-->
@@ -220,9 +221,12 @@
 
                       <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="{{route('LeafType_Details.list')}}">
                           <i data-feather="feather"> </i><span>Leaf Type</span></a></li>
-
+                          
                       <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="{{route('Manufacturer_Details.list')}}">
                         <i data-feather="users"> </i><span>Manufacturer</span></a></li>
+
+                      <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="{{route('Medicine_Details.create')}}">
+                          <i data-feather="users"> </i><span>Medicine</span></a></li>
                   </ul>
                 </li>
               </ul>
@@ -259,7 +263,7 @@
  <script src="{{asset('assets/js/chart/apex-chart/stock-prices.js')}}"></script>
  <script src="{{asset('assets/js/clipboard/clipboard.min.js')}}"></script>
  <script src="{{asset('assets/js/custom-card/custom-card.js')}}"></script>
- <script src="{{asset('assets/js/notify/bootstrap-notify.min.js')}}"></script>
+
  <script src="{{asset('assets/js/vector-map/jquery-jvectormap-2.0.2.min.js')}}"></script>
  <script src="{{asset('assets/js/vector-map/map/jquery-jvectormap-world-mill-en.js')}}"></script>
  <script src="{{asset('assets/js/vector-map/map/jquery-jvectormap-us-aea-en.js')}}"></script>
@@ -299,6 +303,12 @@
  <script src="{{asset('assets/js/datatable/datatable-extension/dataTables.scroller.min.js')}}"></script>
  <script src="{{asset('assets/js/datatable/datatable-extension/custom.js')}}"></script>
   <!-- login js-->
+
+  <script src="{{asset('assets/js/datepicker/date-picker/datepicker.js')}}"></script>
+  <script src="{{asset('assets/js/datepicker/date-picker/datepicker.en.js')}}"></script>
+  <script src="{{asset('assets/js/datepicker/date-picker/datepicker.custom.js')}}"></script>
+  <script src="{{asset('assets/js/select2/select2.full.min.js')}}"></script>
+  <script src="{{asset('assets/js/select2/select2-custom.js')}}"></script>
 
 </body>
 
