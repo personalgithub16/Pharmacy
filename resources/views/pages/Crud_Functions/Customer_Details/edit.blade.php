@@ -202,7 +202,7 @@
                   @endif
                   <!-- Validation End -->
                 </div>
-                <button class="btn btn-primary btn-lg" type="submit">Edit Customer Information</button>
+                <button class="btn btn-success btn-lg" type="submit">Update Customer Information</button>
               </form>
             </div>
           </div>

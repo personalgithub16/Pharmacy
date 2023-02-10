@@ -1,15 +1,13 @@
-
 @extends('layouts.mother_layout')
 @section('content')
 
-
-
 <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 <style>
-  td.dynamic_value{
+  td.dynamic_value {
     text-align: center;
   }
-  th.attribute_names{
+
+  th.attribute_names {
     text-align: center;
   }
 </style>
@@ -17,6 +15,7 @@
 
 <!-- Page Sidebar Ends-->
 <div class="page-body">
+
   <!-- Container-fluid starts-->
   <div class="container-fluid">
     <div class="row">
@@ -25,12 +24,13 @@
           <div class="card-header pb-0">
             <h4>Customers List </h4>
             <span>
-              <a href="{{route('Customer_Details.create')}}"><button class="btn btn-outline-success-2x" type="button" style="float: right;"><i class="fa-solid fa-plus"></i>  Add New Customer</button></a>
+              <a href="{{route('Customer_Details.create')}}"><button class="btn btn-outline-success-2x" type="button"
+                  style="float: right;"><i class="fa-solid fa-plus"></i> Add New Customer</button></a>
             </span>
           </div>
           <div class="card-body">
             <div class="dt-ext table-responsive">
-              <table class="display" id="export-button" >
+              <table class="display" id="export-button">
                 <thead>
                   <tr>
                     <th class="attribute_names">Id</th>
@@ -53,14 +53,22 @@
                     <td class="dynamic_value">{{$CustomerInfo->debit_balance}}</td>
                     <td>
                       <ul class="">
-                       <div class="action_button" style="display:flex; justify-content:center">
-                        <a href="{{route('Customer_Details.edit' , $CustomerInfo->id)}}" class="custom_image"  data-bs-original-title="Edit"style="padding: 4px;"><img style="height:30px; width:auto; text-align:center" src="{{asset('assets/images/edit.png')}}" alt=""></a>
-                        <a href="{{route('Customer_Details.destroy', $CustomerInfo->id)}}" class="custom_image" data-bs-original-title="Delete" onclick="return confirm('Are you sure?')"   style="padding: 4px;"><img style="height:30px; width:auto;" src="{{asset('assets/images/delete.png')}}"></a>
-                        <a href="{{route('Customer_Details.preview' , $CustomerInfo->id)}}" class="custom_image" data-bs-original-title="Show All" style="padding: 4px;"><img style="height:30px; width:auto;" src="{{asset('assets/images/file.png')}}" alt=""></a>
-                       </div>
+                        <div class="action_button" style="display:flex; justify-content:center">
+                          <a href="{{route('Customer_Details.edit' , $CustomerInfo->id)}}" class="custom_image"
+                            data-bs-original-title="Edit" style="padding: 4px;"><img
+                              style="height:30px; width:auto; text-align:center"
+                              src="{{asset('assets/images/edit.png')}}" alt=""></a>
+                          <a href="{{route('Customer_Details.destroy', $CustomerInfo->id)}}" class="custom_image"
+                            data-bs-original-title="Delete" onclick="return confirm('Are you sure?')"
+                            style="padding: 4px;"><img style="height:30px; width:auto;"
+                              src="{{asset('assets/images/delete.png')}}"></a>
+                          <a href="{{route('Customer_Details.preview' , $CustomerInfo->id)}}" class="custom_image"
+                            data-bs-original-title="Show All" style="padding: 4px;"><img
+                              style="height:30px; width:auto;" src="{{asset('assets/images/file.png')}}" alt=""></a>
+                        </div>
                     </td>
                   </tr>
-                  @endforeach        
+                  @endforeach
                 </tbody>
                 <tfoot>
                   <tr>
@@ -76,12 +84,11 @@
     </div>
   </div>
   <!-- Container-fluid Ends-->
+  
 </div>
 
 <script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
 {!! Toastr::message() !!}
 
-
 @endsection
-     

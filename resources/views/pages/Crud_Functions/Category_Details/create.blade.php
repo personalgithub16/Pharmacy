@@ -37,7 +37,7 @@
                   @endif
                   <!-- Validation End -->
                 </div>
-                <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+                <button class="btn btn-success btn-lg" type="submit">Submit Category</button>
               </form>
             </div>
           </div>

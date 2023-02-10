@@ -8,7 +8,6 @@
 </style>
 
 <div class="page-body">
-
   <!-- Container-fluid start-->
   <div class="container-fluid">
     <div class="row">
@@ -237,7 +236,7 @@
                   </div>
 
                 </div>
-                <button class="btn btn-primary btn-lg" type="submit">Submit Medicine Information</button>
+                <button class="btn btn-success btn-lg" type="submit">Submit Medicine Information</button>
               </form>
             </div>
           </div>
@@ -246,8 +245,7 @@
     </div>
     <!-- Container-fluid Ends-->
   </div>
-
 </div>
-    <!-- Container-fluid end-->
+  <!-- Container-fluid ends-->
 
 @endsection

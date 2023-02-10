@@ -208,7 +208,7 @@
                   <!-- Validation End -->
 
                 </div>
-                <button class="btn btn-primary btn-lg" type="submit">Submit Customer Information</button>
+                <button class="btn btn-success btn-lg" type="submit">Submit Customer Information</button>
               </form>
             </div>
           </div>

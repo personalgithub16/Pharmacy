@@ -54,9 +54,8 @@
                   </div>
                   @endif
                   <!-- Validation End -->
-
                 </div>
-                <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+                <button class="btn btn-success btn-lg" type="submit">Submit Leaf Type</button>
               </form>
             </div>
           </div>

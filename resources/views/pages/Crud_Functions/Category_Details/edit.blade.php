@@ -40,7 +40,7 @@
                   @endif
                   <!-- Validation End  -->
                 </div>
-                <button class="btn btn-primary btn-lg" type="submit">Update</button>
+                <button class="btn btn-success btn-lg" type="submit">Update Category</button>
               </form>
             </div>
           </div>
