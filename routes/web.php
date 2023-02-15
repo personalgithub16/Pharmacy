@@ -76,6 +76,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/Medicine_Details/update/{id}', 'App\Http\Controllers\MedicineController@update')->name('Medicine_Details.update');
     Route::get('Medicine_Details/{id}', 'App\Http\Controllers\MedicineController@destroy')->name('Medicine_Details.destroy');
     Route::get('/Medicine_Details/preview/{id}', 'App\Http\Controllers\MedicineController@preview')->name('Medicine_Details.preview');
+    Route::get('/changeStatus/','App\Http\Controllers\MedicineController@Status')->name('changeStatus');
 });
 
 

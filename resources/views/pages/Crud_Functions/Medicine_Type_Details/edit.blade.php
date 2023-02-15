@@ -47,5 +47,7 @@
       </div>
       <!-- Container-fluid Ends-->
     </div>
+     <!-- Container-fluid ends-->
+</div>
 
 @endsection

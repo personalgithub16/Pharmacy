@@ -29,7 +29,7 @@ class CreateMedicinesTable extends Migration
             $table->foreign('manufacturer_id')->references('id')->on('manufacturers');
             $table->foreign('leaftype_id')->references('id')->on('leaf_types');
             $table->foreign('unit_id')->references('id')->on('medicine_units');
-            $table->string('status')->default('inactive');
+            $table->string('status')->default('0');
             $table->softDeletes();
             $table->timestamps();
         });

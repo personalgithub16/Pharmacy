@@ -60,7 +60,6 @@ class ManufacturerController extends Controller
         //
         $Manufacturer_Details = Manufacturer::find($id);
         return view('pages.Crud_Functions.Manufacturer_Details.edit',compact('Manufacturer_Details'));
-
     }
 
     public function update(Request $request, $id)

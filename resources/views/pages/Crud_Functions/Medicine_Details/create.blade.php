@@ -8,6 +8,7 @@
 </style>
 
 <div class="page-body">
+
   <!-- Container-fluid start-->
   <div class="container-fluid">
     <div class="row">
@@ -25,8 +26,8 @@
                 @csrf
                 {{method_field('PUT')}}
                 <div class="row g-3">
+                  <!-- First Column Start -->
                   <div class="col-md-6">
-
                     <!-- Form Input Start -->
                     <div class="col-md-12 mb-3">
                       <label class="form-label "> <b class="label_font_size">Bar Code</b> </label>
@@ -100,7 +101,7 @@
                     <div class="col-md-12 mb-3">
                       <label class="form-label"> <b class="label_font_size"> Expire Date </b></label>
                       <input class="datepicker-here form-control digits" name="expire_date_of_the_medicine" type="text"
-                        data-language="en">
+                        data-language="en" autocomplete="off">
                     </div>
                     <!-- Form Input End -->
 
@@ -150,12 +151,11 @@
                     </div>
                     @endif
                     <!-- Validation End -->
-
                   </div>
+                  <!-- First Column End -->
 
+                  <!-- Second Column Start -->
                   <div class="col-md-6">
-
-
                     <!-- Form Input Start -->
                     <div class="col-md-12 mb-3">
                       <label class="form-label"> <b class="label_font_size"> Medicine Manufacturer Price </b></label>
@@ -174,9 +174,6 @@
                     </div>
                     @endif
                     <!-- Validation End -->
-
-
-
 
                     <div class=" col-md-12 mb-3 col-form-label">
                       <label class="form-label"><b class="label_font_size"> Select Category </b></label>
@@ -232,9 +229,9 @@
                         @endforeach
                       </select>
                     </div>
-
                   </div>
-
+                  <!-- Second Column Start -->
+                  
                 </div>
                 <button class="btn btn-success btn-lg" type="submit">Submit Medicine Information</button>
               </form>
@@ -245,7 +242,8 @@
     </div>
     <!-- Container-fluid Ends-->
   </div>
+  
 </div>
-  <!-- Container-fluid ends-->
+<!-- Container-fluid ends-->
 
 @endsection

@@ -14,6 +14,7 @@
   <title>Pharmacy Management System</title>
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
   <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/select2.css')}}">
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
@@ -225,7 +226,7 @@
                       <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="{{route('Manufacturer_Details.list')}}">
                         <i data-feather="users"> </i><span>Manufacturer</span></a></li>
 
-                      <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="{{route('Medicine_Details.create')}}">
+                      <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="{{route('Medicine_Details.list')}}">
                           <i data-feather="users"> </i><span>Medicine</span></a></li>
                   </ul>
                 </li>
@@ -309,6 +310,7 @@
   <script src="{{asset('assets/js/datepicker/date-picker/datepicker.custom.js')}}"></script>
   <script src="{{asset('assets/js/select2/select2.full.min.js')}}"></script>
   <script src="{{asset('assets/js/select2/select2-custom.js')}}"></script>
+  
 
 </body>
 

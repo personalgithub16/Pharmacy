@@ -44,5 +44,6 @@
     <!-- Container-fluid Ends-->
   </div>
   <!-- footer start-->
+</div>
 
   @endsection
